@@ -30,7 +30,7 @@ Foram estruturados três tópicos MQTT principais:
 Os dados são consumidos por um painel **Node-RED**, que exibe um Dashboard para controle da missão e persiste as informações automaticamente em tabelas (LOG_COLISAO e LOG_STATUS_DRONE) em um banco de dados MySQL hospedado no **Clever Cloud**.
 
 ## 🚀 Como Executar
-1. Acesse o projeto no Wokwi através do link: `[CLIQUE AQUI](https://wokwi.com/projects/465311269133858817)`
+1. Acesse o projeto no Wokwi através do link: [CLIQUE AQUI](https://wokwi.com/projects/465311269133858817)
 2. Dê o Play na simulação.
 3. Clique no sensor HC-SR04 e deslize a barra de distância.
 4. Distâncias menores que 300m acionam o alerta luminoso (LED). Menores que 50m disparam a captura autônoma (Servo).
