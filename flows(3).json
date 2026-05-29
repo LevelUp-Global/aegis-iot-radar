@@ -1,0 +1,506 @@
+[
+    {
+        "id": "e70eda2d9db13cc7",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ee0bae40bf5bdfda",
+        "type": "MySQLdatabase",
+        "name": "Banco IOTFIAP2",
+        "host": "bervjpmuymaez7jryy0o-mysql.services.clever-cloud.com",
+        "port": "3306",
+        "db": "bervjpmuymaez7jryy0o",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "8b061581e9d713fb",
+        "type": "ui_tab",
+        "name": "Monitoramento Estufa",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "618be948a6d3e4cb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "289a24a8723dbf87",
+        "type": "ui_group",
+        "name": "Monitoramento Estufa",
+        "tab": "8b061581e9d713fb",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "804dcff7a419f376",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "d5ff332d83eafb91",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ce918f0e6272473fa7f0a26b9b481604.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "804dcff7a419f376",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e9f7e0c25010e73b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ce918f0e6272473fa7f0a26b9b481604.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e3df599296bbf6a6",
+        "type": "ui_tab",
+        "name": "Painel CLYVO VET",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a8f5bc00bc0a2bd5",
+        "type": "ui_group",
+        "name": "Monitoramento Contínuo",
+        "tab": "e3df599296bbf6a6",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "76dc93480940364d",
+        "type": "ui_tab",
+        "name": "Aegis - Ground Control",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8ac68a3bf18d462b",
+        "type": "ui_group",
+        "name": "Telemetria do Radar",
+        "tab": "76dc93480940364d",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "922e986bd3ee5184",
+        "type": "mqtt in",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "topic": "aegis/drone/telemetria",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e9f7e0c25010e73b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "7139b0f56167321d"
+            ]
+        ]
+    },
+    {
+        "id": "80e9a7b662d7189c",
+        "type": "mqtt in",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "topic": "aegis/drone/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e9f7e0c25010e73b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "2fb2c03cadfe502c",
+                "f23339bd37ea28d8"
+            ]
+        ]
+    },
+    {
+        "id": "7139b0f56167321d",
+        "type": "json",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "9d66a9edc45609a2",
+                "2107f26b13f2f9b0"
+            ]
+        ]
+    },
+    {
+        "id": "2bddc436272ef799",
+        "type": "ui_gauge",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "group": "8ac68a3bf18d462b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distância do Alvo",
+        "label": "metros",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1270,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2fb2c03cadfe502c",
+        "type": "ui_text",
+        "z": "e70eda2d9db13cc7",
+        "group": "8ac68a3bf18d462b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status da Missão",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "29f7ced562b8a7d2",
+        "type": "ui_button",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "group": "8ac68a3bf18d462b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Acionamento Manual da Rede",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "DISPARAR",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "1598a530d6cd3d3c"
+            ]
+        ]
+    },
+    {
+        "id": "1598a530d6cd3d3c",
+        "type": "mqtt out",
+        "z": "e70eda2d9db13cc7",
+        "name": "",
+        "topic": "aegis/comando/rede",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e9f7e0c25010e73b",
+        "x": 840,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9d66a9edc45609a2",
+        "type": "function",
+        "z": "e70eda2d9db13cc7",
+        "name": "function 1",
+        "func": "var dados = typeof msg.payload === 'string' ? JSON.parse(msg.payload) : msg.payload;\n\nvar dist = dados.distancia;\nvar cx = dados.coordX;\nvar cy = dados.coordY;\n\n// Lógica de negócio\nvar alerta = \"Monitoramento\";\nif (dist < 300) {\n    alerta = \"Risco Crítico\";\n}\n\n// Monta a Query\nmsg.topic = \"INSERT INTO LOG_COLISAO (distancia, coordenada_x, coordenada_y, status_alerta) VALUES (\" + dist + \", \" + cx + \", \" + cy + \", '\" + alerta + \"');\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "7b0d0324626c35b9",
+                "483c3f02ba4c43f5"
+            ]
+        ]
+    },
+    {
+        "id": "7b0d0324626c35b9",
+        "type": "mysql",
+        "z": "e70eda2d9db13cc7",
+        "mydb": "ee0bae40bf5bdfda",
+        "name": "",
+        "x": 1150,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "483c3f02ba4c43f5",
+        "type": "debug",
+        "z": "e70eda2d9db13cc7",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f23339bd37ea28d8",
+        "type": "function",
+        "z": "e70eda2d9db13cc7",
+        "name": "function 2",
+        "func": "var msgStatus = msg.payload;\n\nmsg.topic = \"INSERT INTO LOG_STATUS_DRONE (mensagem_status) VALUES ('\" + msgStatus + \"');\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 420,
+        "wires": [
+            [
+                "7b0d0324626c35b9"
+            ]
+        ]
+    },
+    {
+        "id": "2107f26b13f2f9b0",
+        "type": "function",
+        "z": "e70eda2d9db13cc7",
+        "name": "function 3",
+        "func": "var dados = typeof msg.payload === 'string' ? JSON.parse(msg.payload) : msg.payload;\n\nmsg.payload = dados.distancia;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 220,
+        "wires": [
+            [
+                "2bddc436272ef799"
+            ]
+        ]
+    },
+    {
+        "id": "2261e1d3ed2d917b",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-mysql": "3.0.0",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
