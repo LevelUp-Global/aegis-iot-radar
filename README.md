@@ -35,4 +35,4 @@ Os dados são consumidos por um painel **Node-RED**, que exibe um Dashboard para
 3. Clique no sensor HC-SR04 e deslize a barra de distância.
 4. Distâncias menores que 300m acionam o alerta luminoso (LED). Menores que 50m disparam a captura autônoma (Servo).
 
-🎥 **Link do Vídeo Pitch:** [LINK O VÍDEO DO YOUTUBE AQUI](https://youtu.be/ANOz0vDx3WE)
+🎥 **Link do Vídeo Pitch:** [LINK O VÍDEO DO YOUTUBE AQUI](https://youtu.be/TIruARruBeU)
